@@ -5,8 +5,8 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Testing
   - Functional Testing
+  - Testing
 url: >-
   https://raw.githubusercontent.com/api-evangelist/step-ci/refs/heads/main/apis.yml
 created: '2026-03-25'
@@ -19,8 +19,8 @@ apis:
       Step CI is an open source API testing and monitoring framework that uses YAML-based workflows to define and run automated API test scenarios.
     humanURL: https://stepci.com
     tags:
-      - Testing
       - Functional Testing
+      - Testing
     properties:
       - type: Documentation
         url: https://docs.stepci.com
