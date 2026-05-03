@@ -1,0 +1,111 @@
+vocabulary:
+  name: Step CI Vocabulary
+  description: >-
+    Domain vocabulary for the Step CI open source API testing and quality
+    assurance framework, covering testing concepts, workflow definitions,
+    and CI/CD integration terminology.
+  version: '1.0'
+  created: '2026-05-02'
+  modified: '2026-05-02'
+
+terms:
+  - term: Workflow
+    definition: >-
+      A YAML (or JSON/JavaScript) file that defines a complete set of API
+      test scenarios, including configuration, environment variables,
+      reusable components, and test cases.
+    category: Core
+
+  - term: Test Case
+    definition: >-
+      A named collection of test steps in a workflow that validates a
+      specific API behavior or user journey.
+    category: Core
+
+  - term: Step
+    definition: >-
+      An individual test action within a test case that executes an API
+      call (HTTP, gRPC, GraphQL, tRPC, or SOAP) and validates the response.
+    category: Core
+
+  - term: Capture
+    definition: >-
+      A mechanism to extract values from API responses using JSONPath,
+      XPath, regex, headers, or cookies for use in subsequent steps.
+    category: Testing
+
+  - term: Check
+    definition: >-
+      An assertion that validates the API response against expected values,
+      supporting status codes, headers, body content, schemas, and performance.
+    category: Testing
+
+  - term: Schema Validation
+    definition: >-
+      Contract testing that validates an API response body conforms to
+      a defined JSON Schema or OpenAPI schema definition.
+    category: Testing
+
+  - term: Load Test
+    definition: >-
+      A built-in feature that sends concurrent requests to measure API
+      performance under load, with configurable phases and thresholds.
+    category: Testing
+
+  - term: Credential
+    definition: >-
+      A reusable named authentication configuration supporting basic auth,
+      bearer tokens, OAuth 2.0, API keys, certificates, and TLS.
+    category: Authentication
+
+  - term: Environment Variable
+    definition: >-
+      A runtime variable defined in the workflow's env block or passed
+      via CLI, accessible throughout the workflow as ${{env.VARIABLE}}.
+    category: Configuration
+
+  - term: Lifecycle Hook
+    definition: >-
+      Before/after blocks that define setup and teardown test suites
+      executed before or after the main test cases run.
+    category: Configuration
+
+  - term: Plugin
+    definition: >-
+      A custom step extension that adds support for additional protocols
+      or custom test actions beyond the built-in capabilities.
+    category: Extensibility
+
+  - term: OpenAPI Import
+    definition: >-
+      The ability to auto-generate Step CI test workflows by importing
+      an OpenAPI specification using the stepci generate command.
+    category: Integration
+
+  - term: Continuous Integration
+    definition: >-
+      The practice of running Step CI workflows automatically in a CI/CD
+      pipeline (GitHub Actions, GitLab CI, Jenkins, etc.) on every code change.
+    category: CI/CD
+
+  - term: Self-Hosted
+    definition: >-
+      Step CI runs entirely in the user's own infrastructure without
+      sending test data to external services.
+    category: Deployment
+
+  - term: JSONPath
+    definition: >-
+      A query language for extracting data from JSON responses used in
+      Step CI captures and checks (e.g., $.data[0].id).
+    category: Testing
+
+categories:
+  - Core
+  - Testing
+  - Authentication
+  - Configuration
+  - Extensibility
+  - Integration
+  - CI/CD
+  - Deployment

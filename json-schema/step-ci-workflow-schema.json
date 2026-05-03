@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/api-evangelist/step-ci/blob/main/json-schema/step-ci-workflow-schema.json",
+  "title": "Step CI Workflow",
+  "description": "Schema for a Step CI YAML workflow file defining automated API test scenarios",
+  "type": "object",
+  "required": ["version", "name"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Workflow file version identifier",
+      "example": "1.1"
+    },
+    "name": {
+      "type": "string",
+      "description": "Descriptive name for the test workflow"
+    },
+    "env": {
+      "type": "object",
+      "description": "Environment variables accessible in the workflow via ${{env.variableName}}",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "config": {
+      "type": "object",
+      "description": "Global workflow configuration settings",
+      "properties": {
+        "continueOnFail": {
+          "type": "boolean",
+          "description": "Whether to continue executing steps after a failure"
+        },
+        "concurrency": {
+          "type": "integer",
+          "description": "Number of concurrent test executions"
+        },
+        "http": {
+          "type": "object",
+          "description": "HTTP client configuration",
+          "properties": {
+            "baseURL": {
+              "type": "string",
+              "description": "Base URL prepended to all HTTP requests"
+            },
+            "rejectUnauthorized": {
+              "type": "boolean",
+              "description": "Whether to reject self-signed SSL certificates"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "type": "object",
+      "description": "Reusable workflow components",
+      "properties": {
+        "schemas": {
+          "type": "object",
+          "description": "Named JSON/OpenAPI schemas for response validation"
+        },
+        "credentials": {
+          "type": "object",
+          "description": "Named authentication credentials"
+        }
+      }
+    },
+    "tests": {
+      "type": "object",
+      "description": "Collection of named test cases",
+      "additionalProperties": {
+        "$ref": "#/definitions/TestCase"
+      }
+    },
+    "before": {
+      "type": "object",
+      "description": "Setup steps executed before all tests"
+    },
+    "after": {
+      "type": "object",
+      "description": "Teardown steps executed after all tests"
+    }
+  },
+  "definitions": {
+    "TestCase": {
+      "type": "object",
+      "required": ["steps"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Test case display name"
+        },
+        "steps": {
+          "type": "array",
+          "description": "Ordered list of test steps",
+          "items": {
+            "$ref": "#/definitions/Step"
+          }
+        }
+      }
+    },
+    "Step": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Step name for reporting"
+        },
+        "http": {
+          "$ref": "#/definitions/HttpStep"
+        },
+        "grpc": {
+          "type": "object",
+          "description": "gRPC step configuration"
+        },
+        "graphql": {
+          "type": "object",
+          "description": "GraphQL step configuration"
+        },
+        "delay": {
+          "type": "integer",
+          "description": "Delay in milliseconds before executing the step"
+        }
+      }
+    },
+    "HttpStep": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "Request URL (relative or absolute)"
+        },
+        "method": {
+          "type": "string",
+          "enum": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+          "description": "HTTP method"
+        },
+        "headers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Request headers"
+        },
+        "body": {
+          "description": "Request body (string, object, or array)"
+        },
+        "params": {
+          "type": "object",
+          "description": "Query string parameters",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "auth": {
+          "type": "object",
+          "description": "Step-level authentication configuration"
+        },
+        "captures": {
+          "type": "object",
+          "description": "Data to extract from the response for use in subsequent steps"
+        },
+        "check": {
+          "type": "object",
+          "description": "Response validation assertions"
+        }
+      }
+    }
+  }
+}

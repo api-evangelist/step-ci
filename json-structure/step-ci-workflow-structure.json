@@ -1,0 +1,101 @@
+{
+  "title": "Step CI Workflow Structure",
+  "description": "Field structure documentation for Step CI YAML workflow files",
+  "type": "object",
+  "fields": [
+    {
+      "name": "version",
+      "type": "string",
+      "required": true,
+      "description": "Workflow file schema version (e.g., '1.1')"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": true,
+      "description": "Workflow display name for reports"
+    },
+    {
+      "name": "env",
+      "type": "object",
+      "required": false,
+      "description": "Key-value environment variables accessible via ${{env.KEY}}"
+    },
+    {
+      "name": "config",
+      "type": "object",
+      "required": false,
+      "description": "Global client and execution configuration",
+      "children": [
+        {
+          "name": "continueOnFail",
+          "type": "boolean",
+          "description": "Continue workflow execution after step failures"
+        },
+        {
+          "name": "http.baseURL",
+          "type": "string",
+          "description": "Base URL for all HTTP requests"
+        },
+        {
+          "name": "loadTest",
+          "type": "object",
+          "description": "Load test phase definitions with duration and arrival rates"
+        }
+      ]
+    },
+    {
+      "name": "components",
+      "type": "object",
+      "required": false,
+      "description": "Reusable schemas and credentials",
+      "children": [
+        {
+          "name": "schemas",
+          "type": "object",
+          "description": "Named JSON Schema definitions for response validation"
+        },
+        {
+          "name": "credentials",
+          "type": "object",
+          "description": "Named authentication configurations (basic, bearer, OAuth2, certificate)"
+        }
+      ]
+    },
+    {
+      "name": "tests",
+      "type": "object",
+      "required": false,
+      "description": "Named test cases each containing an array of steps",
+      "children": [
+        {
+          "name": "steps",
+          "type": "array",
+          "description": "Ordered test steps with protocol-specific configurations",
+          "children": [
+            {
+              "name": "name",
+              "type": "string",
+              "description": "Step display name"
+            },
+            {
+              "name": "http",
+              "type": "object",
+              "description": "HTTP request configuration: url, method, headers, body, params, auth, captures, check"
+            },
+            {
+              "name": "grpc",
+              "type": "object",
+              "description": "gRPC call configuration: host, proto, service, method, data, metadata"
+            },
+            {
+              "name": "graphql",
+              "type": "object",
+              "description": "GraphQL request: url, query, variables, headers"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

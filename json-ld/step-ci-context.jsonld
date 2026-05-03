@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "stepci": "https://stepci.com/vocab/",
+    "schema": "https://schema.org/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "Workflow": {
+      "@id": "stepci:Workflow",
+      "@type": "@id"
+    },
+    "TestCase": {
+      "@id": "stepci:TestCase",
+      "@type": "@id"
+    },
+    "Step": {
+      "@id": "stepci:Step",
+      "@type": "@id"
+    },
+    "name": "schema:name",
+    "description": "schema:description",
+    "version": "schema:version",
+    "env": "stepci:environment",
+    "config": "stepci:configuration",
+    "tests": "stepci:tests",
+    "steps": "stepci:steps",
+    "url": "schema:url",
+    "method": "stepci:httpMethod",
+    "headers": "stepci:headers",
+    "body": "stepci:requestBody",
+    "params": "stepci:queryParameters",
+    "captures": "stepci:captures",
+    "check": "stepci:assertions",
+    "auth": "stepci:authentication",
+    "components": "stepci:components",
+    "schemas": "stepci:schemas",
+    "credentials": "stepci:credentials"
+  }
+}
