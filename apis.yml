@@ -49,6 +49,8 @@ apis:
       - type: Workflow Syntax
         url: https://docs.stepci.com/reference/workflow-syntax
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/step-ci
   - type: Website
     url: https://stepci.com
   - type: Documentation
