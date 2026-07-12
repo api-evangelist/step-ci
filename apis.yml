@@ -51,6 +51,8 @@ apis:
   - url: graphql/step-ci-graphql.md
     type: GraphQL
 common:
+- type: DomainSecurity
+  url: security/step-ci-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/step-ci
 - type: Website
