@@ -63,6 +63,9 @@ apis:
   - url: graphql/step-ci-graphql.md
     type: GraphQL
 common:
+- type: License
+  name: MPL-2.0
+  url: https://github.com/stepci/stepci/blob/main/LICENSE
 - type: DomainSecurity
   url: security/step-ci-domain-security.yml
 - type: LinkedIn
