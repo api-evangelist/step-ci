@@ -32,7 +32,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/step-ci/refs/heads/main/apis.yml
 created: '2026-03-25'
 modified: '2026-05-02'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: step-ci:step-ci
   name: Step CI
