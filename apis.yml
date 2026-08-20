@@ -27,6 +27,14 @@ tags:
 - CI/CD
 - Quality Assurance
 - Automation
+- Open-Source
+tags_raw:
+- API Testing
+- Functional Testing
+- Testing
+- CI/CD
+- Quality Assurance
+- Automation
 - Open Source
 url: >-
   https://raw.githubusercontent.com/api-evangelist/step-ci/refs/heads/main/apis.yml
@@ -45,6 +53,13 @@ apis:
     CircleCI, Jenkins, Azure Pipelines, AWS CodeBuild, and more.
   humanURL: https://stepci.com
   tags:
+  - API Testing
+  - Functional Testing
+  - Testing
+  - CI/CD
+  - Quality Assurance
+  - Open-Source
+  tags_raw:
   - API Testing
   - Functional Testing
   - Testing
