@@ -7,6 +7,18 @@ description: >-
   testing framework. Step CI is language-agnostic, self-hosted, and integrates
   with all major CI/CD platforms.
 type: Index
+deliveryModel:
+  model: self-hosted
+  license: MPL-2.0
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -78,6 +90,10 @@ apis:
   - url: graphql/step-ci-graphql.md
     type: GraphQL
 common:
+- type: IssueTracker
+  url: https://github.com/stepci/stepci/issues
+- type: Releases
+  url: https://github.com/stepci/stepci/releases
 - type: License
   name: MPL-2.0
   url: https://github.com/stepci/stepci/blob/main/LICENSE
