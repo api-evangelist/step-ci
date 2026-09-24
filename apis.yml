@@ -39,7 +39,7 @@ tags:
 - CI/CD
 - Quality Assurance
 - Automation
-- Open-Source
+- Open Source
 tags_raw:
 - API Testing
 - Functional Testing
@@ -48,6 +48,7 @@ tags_raw:
 - Quality Assurance
 - Automation
 - Open Source
+- Open-Source
 url: >-
   https://raw.githubusercontent.com/api-evangelist/step-ci/refs/heads/main/apis.yml
 created: '2026-03-25'
@@ -70,7 +71,7 @@ apis:
   - Testing
   - CI/CD
   - Quality Assurance
-  - Open-Source
+  - Open Source
   tags_raw:
   - API Testing
   - Functional Testing
@@ -78,6 +79,7 @@ apis:
   - CI/CD
   - Quality Assurance
   - Open Source
+  - Open-Source
   properties:
   - type: Documentation
     url: https://docs.stepci.com
@@ -87,8 +89,6 @@ apis:
     url: https://www.npmjs.com/package/stepci
   - type: Workflow Syntax
     url: https://docs.stepci.com/reference/workflow-syntax
-  - url: graphql/step-ci-graphql.md
-    type: GraphQL
 common:
 - type: IssueTracker
   url: https://github.com/stepci/stepci/issues

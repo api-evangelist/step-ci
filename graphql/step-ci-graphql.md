@@ -1,1 +1,0 @@
-# Step CI GraphQL API
