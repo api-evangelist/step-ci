@@ -90,6 +90,12 @@ apis:
   - type: Workflow Syntax
     url: https://docs.stepci.com/reference/workflow-syntax
 common:
+- type: Plans
+  url: plans/step-ci-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/step-ci-rate-limits.yml
+- type: FinOps
+  url: finops/step-ci-finops.yml
 - type: IssueTracker
   url: https://github.com/stepci/stepci/issues
 - type: Releases
