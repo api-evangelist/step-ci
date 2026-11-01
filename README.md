@@ -64,43 +64,145 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Step CI is an open source API Quality Assurance framework that is language-agnostic and configured using YAML, JSON, or JavaScript. It supports REST, GraphQL, gRPC, tRPC, and SOAP protocols in a single workflow. Step CI is self-hosted and integrates with GitHub Actions, GitLab CI/CD, CircleCI, Jenkins, Azure Pipelines, AWS CodeBuild, and more.
+Step CI is an open source API testing and monitoring framework that uses YAML-based workflows to define and run automated API test scenarios. It supports REST, GraphQL, gRPC, tRPC, and SOAP protocols in a single unified testing framework. Step CI is language-agnostic, self-hosted, and integrates with all major CI/CD platforms.
 
-## APIs
+**Areas:** API Testing · Functional Testing · Testing · CI/CD · Quality Assurance · Automation · Open Source
 
-- [Step CI](https://stepci.com) — Open source API testing framework supporting REST, GraphQL, gRPC, tRPC, and SOAP with YAML-based workflow definitions.
+## Step CI on APIs.io
 
-## JSON Schema
+Everything profiled for Step CI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/step-ci/](https://apis.io/providers/step-ci/)** — or go straight to one of the APIs or properties below.
 
-- [step-ci-workflow-schema.json](json-schema/step-ci-workflow-schema.json) — JSON Schema for Step CI workflow files
+### APIs (1)
 
-## JSON Structure
+- [Step CI](https://apis.io/apis/step-ci/step-ci/) — Step CI is an open source API Quality Assurance framework that is language-agnostic and configured using YAML, JSON, or JavaScript. It supports REST,…
 
-- [step-ci-workflow-structure.json](json-structure/step-ci-workflow-structure.json) — Field structure documentation for Step CI workflows
+### Published properties
 
-## JSON-LD
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- [step-ci-context.jsonld](json-ld/step-ci-context.jsonld) — JSON-LD context for Step CI workflow concepts
+#### GraphQL (1)
 
-## Examples
+GraphQL schemas.
 
-- [step-ci-rest-workflow-example.json](examples/step-ci-rest-workflow-example.json) — Example REST API test workflow with captures and schema validation
+- [Moved to /providers/step-ci/](https://apis.io/graphqls/step-ci/step-ci-graphql/)
 
-## Vocabulary
+#### JSON Schema (1)
 
-- [step-ci-vocabulary.yml](vocabulary/step-ci-vocabulary.yml) — Domain vocabulary for Step CI testing concepts
+The data models the API reads and writes.
 
-## Common Properties
+- [Step CI Workflow](https://apis.io/schemas/step-ci/step-ci-workflow/)
 
-| Property | URL |
-|----------|-----|
-| Website | https://stepci.com |
-| Documentation | https://docs.stepci.com |
-| GitHub | https://github.com/stepci/stepci |
-| GitHub Organization | https://github.com/stepci |
-| npm Package | https://www.npmjs.com/package/stepci |
-| Discord | https://discord.gg/KqJJzJ3BTu |
+#### JSON Structure (1)
 
-## Maintainers
+Data models expressed in JSON Structure.
 
-- **Kin Lane** - kin@apievangelist.com
+- [Step Ci Workflow Structure](https://apis.io/json-structure/step-ci/step-ci-workflow-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Step Ci Context](https://apis.io/jsonld/step-ci/step-ci-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Step CI Vocabulary](https://apis.io/vocabularies/step-ci/step-ci-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Step Ci Rest Workflow Example](https://apis.io/examples/step-ci/step-ci-rest-workflow-example/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Step CI — jsonschema rules](https://apis.io/rules/step-ci/step-ci-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Step Ci Domain Security](https://apis.io/security/step-ci/step-ci-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Step Ci Plans Pricing](https://apis.io/plans/step-ci/step-ci-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Step Ci Rate Limits](https://apis.io/rate-limits/step-ci/step-ci-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Step Ci Finops](https://apis.io/finops/step-ci/step-ci-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://stepci.com)
+- [Documentation](https://docs.stepci.com)
+- [GitHub](https://github.com/stepci)
+
+## API Evangelist rating
+
+**Kin Score 17.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 10.7 |
+| Contract governance | 9.8 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/step-ci/](https://apis.io/providers/step-ci/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Step CI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/step-ci/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
